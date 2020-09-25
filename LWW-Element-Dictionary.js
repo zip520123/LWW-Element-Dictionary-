@@ -96,7 +96,7 @@ var merge = (lwwed1, lwwed2) => {
             } else {
                 newLwwed.removeSet.add(key)
             }
-            newLwwed.timeMap.set(key,lwwed1.timeMap.get(key))
+            newLwwed.timeMap.set(key,timestamp1)
         } else {
             if(lwwed2.map.has(key)) {
                 let value = lwwed2.query(key)
@@ -104,7 +104,7 @@ var merge = (lwwed1, lwwed2) => {
             } else {
                 newLwwed.removeSet.add(key)
             }
-            newLwwed.timeMap.set(key,lwwed2.timeMap.get(key))
+            newLwwed.timeMap.set(key,timestamp2)
         }
     }
     return newLwwed
